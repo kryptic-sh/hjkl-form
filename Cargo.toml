@@ -1,32 +1,15 @@
-[workspace]
-resolver = "2"
-
-[workspace.package]
-version = "0.3.0"
-edition = "2024"
-license = "MIT"
-repository = "https://github.com/kryptic-sh/hjkl-form"
-authors = ["mxaddict <mxaddict@kryptic.sh>"]
-rust-version = "1.95"
-homepage = "https://hjkl.kryptic.sh"
-readme = "README.md"
-
-[profile.release]
-lto = "thin"
-codegen-units = 1
-
 [package]
 name = "hjkl-form"
 description = "Vim-modal forms for hjkl-based apps."
 keywords = ["form", "vim", "tui", "modal", "ui"]
 categories = ["command-line-interface", "gui"]
-version.workspace = true
-edition.workspace = true
-license.workspace = true
-repository.workspace = true
-homepage.workspace = true
-authors.workspace = true
-rust-version.workspace = true
+version = "0.3.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/kryptic-sh/hjkl-form"
+homepage = "https://hjkl.kryptic.sh"
+authors = ["mxaddict <mxaddict@kryptic.sh>"]
+rust-version = "1.95"
 readme = "README.md"
 
 [dependencies]
