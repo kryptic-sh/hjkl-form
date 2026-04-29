@@ -6,7 +6,7 @@ text field.
 [![CI](https://github.com/kryptic-sh/hjkl/actions/workflows/ci.yml/badge.svg)](https://github.com/kryptic-sh/hjkl/actions/workflows/ci.yml)
 [![crates.io](https://img.shields.io/crates/v/hjkl-form.svg)](https://crates.io/crates/hjkl-form)
 [![docs.rs](https://img.shields.io/docsrs/hjkl-form)](https://docs.rs/hjkl-form)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](../../LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Website](https://img.shields.io/badge/website-hjkl.kryptic.sh-7ee787)](https://hjkl.kryptic.sh)
 
 Each text field hosts its own `Editor<Buffer, FormFieldHost>`, so users get the
@@ -77,4 +77,4 @@ let _ = FormEvent::Changed;
 
 ## License
 
-MIT. See [LICENSE](../../LICENSE).
+MIT. See [LICENSE](LICENSE).
