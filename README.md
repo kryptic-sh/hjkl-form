@@ -3,7 +3,7 @@
 Vim-modal forms built on top of `hjkl-engine` — full vim grammar inside every
 text field.
 
-[![CI](https://github.com/kryptic-sh/hjkl/actions/workflows/ci.yml/badge.svg)](https://github.com/kryptic-sh/hjkl/actions/workflows/ci.yml)
+[![CI](https://github.com/kryptic-sh/hjkl-form/actions/workflows/ci.yml/badge.svg)](https://github.com/kryptic-sh/hjkl-form/actions/workflows/ci.yml)
 [![crates.io](https://img.shields.io/crates/v/hjkl-form.svg)](https://crates.io/crates/hjkl-form)
 [![docs.rs](https://img.shields.io/docsrs/hjkl-form)](https://docs.rs/hjkl-form)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -20,14 +20,14 @@ ratatui flavor.
 
 ## Status
 
-`0.2.0` — Phase I release. `dirty_gen` aggregates buffer mutations and
+`0.3.0` — Phase I release. `dirty_gen` aggregates buffer mutations and
 form-level focus changes; renderers can cheap-skip frames when it hasn't
 advanced.
 
 ## Usage
 
 ```toml
-hjkl-form = "0.2"
+hjkl-form = "0.3"
 ```
 
 ```rust,no_run
