@@ -20,9 +20,8 @@ ratatui flavor.
 
 ## Status
 
-`0.3.0` — Phase I release. `dirty_gen` aggregates buffer mutations and
-form-level focus changes; renderers can cheap-skip frames when it hasn't
-advanced.
+`dirty_gen` aggregates buffer mutations and form-level focus changes; renderers
+can cheap-skip frames when it hasn't advanced.
 
 ## Usage
 
