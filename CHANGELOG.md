@@ -6,6 +6,13 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-05-03
+
+### Docs
+
+- Dropped 0.3.0 milestone callout from the README status section. Per the org's
+  "no SPEC frozen claims" stance.
+
 ## [0.3.1] - 2026-04-30
 
 ### Changed
