@@ -13,8 +13,8 @@ rust-version = "1.95"
 readme = "README.md"
 
 [dependencies]
-hjkl-buffer = "0.3"
-hjkl-engine = { version = "0.3", default-features = false }
+hjkl-buffer = "0.4"
+hjkl-engine = { version = "0.4", default-features = false }
 
 [features]
 crossterm = ["hjkl-engine/crossterm"]
