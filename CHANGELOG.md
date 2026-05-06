@@ -6,6 +6,12 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.4] - 2026-05-06
+
+### Changed
+
+- Bumped `hjkl-buffer` dep requirement to `^0.5` and `hjkl-engine` to `^0.4`.
+
 ## [0.3.3] - 2026-05-04
 
 ### Docs
@@ -34,7 +40,8 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 - Standalone `LICENSE`, `.gitignore`, and `ci.yml` workflow at the repo root.
 
-[Unreleased]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.3...HEAD
+[Unreleased]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.4...HEAD
+[0.3.4]: https://github.com/kryptic-sh/hjkl-form/releases/tag/v0.3.4
 [0.3.3]: https://github.com/kryptic-sh/hjkl-form/releases/tag/v0.3.3
 [0.3.2]: https://github.com/kryptic-sh/hjkl-form/releases/tag/v0.3.2
 [0.3.1]: https://github.com/kryptic-sh/hjkl-form/releases/tag/v0.3.1
