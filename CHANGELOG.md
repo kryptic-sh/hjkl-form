@@ -6,6 +6,16 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.7] - 2026-05-15
+
+### Changed
+
+- Migrated off the deleted `hjkl_engine::step` and `Editor::step_input` — now
+  drives the FSM through `hjkl_vim::dispatch_input`. No public API change for
+  hjkl-form consumers.
+- Bumped `hjkl-engine` dep to `0.7` and `hjkl-vim` dep to `0.19` (Phase 6.6 FSM
+  extraction).
+
 ## [0.3.6] - 2026-05-13
 
 ### Changed
@@ -55,6 +65,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 - Standalone `LICENSE`, `.gitignore`, and `ci.yml` workflow at the repo root.
 
 [Unreleased]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.6...HEAD
+[0.3.7]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/kryptic-sh/hjkl-form/releases/tag/v0.3.4
