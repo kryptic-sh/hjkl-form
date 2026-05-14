@@ -3,7 +3,7 @@
 use crate::host::FormFieldHost;
 use crate::validate::Validator;
 use hjkl_buffer::Buffer;
-use hjkl_engine::{Editor, Host, Input, Key, Options, VimMode, step};
+use hjkl_engine::{Editor, Host, Input, Key, Options, VimMode};
 
 /// Metadata shared by every field variant. Holds the label,
 /// required-marker, the most recent validator error, and an optional
@@ -191,18 +191,12 @@ impl TextFieldEditor {
         self.editor
             .buffer_mut()
             .set_cursor(hjkl_buffer::Position::new(row, col));
-        // Normalise FSM to Normal first so `i` cleanly transitions.
+        // Normalise FSM to Normal first so `enter_insert_shift_a` cleanly
+        // transitions (it expects Normal mode as the entry point).
         self.editor.force_normal();
         // `A` (append at end of line) puts the editor in Insert at EOL —
         // exactly the entry point we want for prompts.
-        let _ = step(
-            &mut self.editor,
-            Input {
-                key: Key::Char('A'),
-                shift: true,
-                ..Input::default()
-            },
-        );
+        self.editor.enter_insert_shift_a(1);
     }
 
     /// Force the inner editor back to Normal mode (Esc).
@@ -225,7 +219,7 @@ impl TextFieldEditor {
             return false;
         }
         let before = self.editor.buffer().dirty_gen();
-        let _ = step(&mut self.editor, input);
+        self.editor.step_input(input);
         self.editor.buffer().dirty_gen() != before
     }
 

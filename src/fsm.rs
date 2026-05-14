@@ -4,7 +4,7 @@
 use crate::field::Field;
 use crate::form::{Form, FormEvent, FormMode};
 use crate::validate::validate_field;
-use hjkl_engine::{Input, Key, VimMode, step};
+use hjkl_engine::{Input, Key, VimMode};
 
 impl Form {
     /// Route a key event through the form. Returns an event if the
@@ -145,7 +145,7 @@ impl Form {
     }
 
     fn handle_normal_text(&mut self, input: Input, _single_line: bool) -> Option<FormEvent> {
-        // i/I/a/A enter Insert mode — forward through vim::step so the
+        // i/I/a/A enter Insert mode — forward via step_input so the
         // engine performs its own Normal→Insert transition.
         let entering_insert = matches!(
             input.key,
@@ -156,7 +156,7 @@ impl Form {
         let prev_gen_before;
         if let Field::SingleLineText(f) | Field::MultiLineText(f) = &mut self.fields[self.focused] {
             prev_gen_before = f.editor.buffer().dirty_gen();
-            let _ = step(&mut f.editor, input);
+            f.editor.step_input(input);
             if entering_insert && f.editor.vim_mode() == VimMode::Insert {
                 f.enter_gen = prev_gen_before;
                 self.mode = FormMode::Insert;
@@ -186,7 +186,7 @@ impl Form {
         // Forward to the focused field's editor.
         if let Field::SingleLineText(f) | Field::MultiLineText(f) = &mut self.fields[self.focused] {
             let before_gen = f.editor.buffer().dirty_gen();
-            let _ = step(&mut f.editor, input);
+            f.editor.step_input(input);
             let after_mode = f.editor.vim_mode();
             let after_gen = f.editor.buffer().dirty_gen();
             if after_mode == VimMode::Normal {
