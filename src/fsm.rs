@@ -156,7 +156,7 @@ impl Form {
         let prev_gen_before;
         if let Field::SingleLineText(f) | Field::MultiLineText(f) = &mut self.fields[self.focused] {
             prev_gen_before = f.editor.buffer().dirty_gen();
-            f.editor.step_input(input);
+            hjkl_vim::dispatch_input(&mut f.editor, input);
             if entering_insert && f.editor.vim_mode() == VimMode::Insert {
                 f.enter_gen = prev_gen_before;
                 self.mode = FormMode::Insert;
@@ -186,7 +186,7 @@ impl Form {
         // Forward to the focused field's editor.
         if let Field::SingleLineText(f) | Field::MultiLineText(f) = &mut self.fields[self.focused] {
             let before_gen = f.editor.buffer().dirty_gen();
-            f.editor.step_input(input);
+            hjkl_vim::dispatch_input(&mut f.editor, input);
             let after_mode = f.editor.vim_mode();
             let after_gen = f.editor.buffer().dirty_gen();
             if after_mode == VimMode::Normal {

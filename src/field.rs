@@ -219,7 +219,7 @@ impl TextFieldEditor {
             return false;
         }
         let before = self.editor.buffer().dirty_gen();
-        self.editor.step_input(input);
+        hjkl_vim::dispatch_input(&mut self.editor, input);
         self.editor.buffer().dirty_gen() != before
     }
 

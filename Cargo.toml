@@ -14,7 +14,8 @@ readme = "README.md"
 
 [dependencies]
 hjkl-buffer = "0.6"
-hjkl-engine = { version = "0.6", default-features = false }
+hjkl-engine = { version = "0.7", default-features = false }
+hjkl-vim = "0.19"
 
 [features]
 crossterm = ["hjkl-engine/crossterm"]
