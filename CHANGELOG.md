@@ -6,6 +6,14 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-05-16
+
+### Changed
+
+- Bumped hjkl-engine 0.8 → 0.9, hjkl-buffer 0.6 → 0.7, hjkl-vim 0.19 → 0.20 to
+  keep dependency tree aligned. No form public API changes; bump required
+  because 0.x caret-minor pins are semver-incompatible.
+
 ## [0.3.7] - 2026-05-15
 
 ### Changed
@@ -64,7 +72,8 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 - Standalone `LICENSE`, `.gitignore`, and `ci.yml` workflow at the repo root.
 
-[Unreleased]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.6...HEAD
+[Unreleased]: https://github.com/kryptic-sh/hjkl-form/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.7...v0.4.0
 [0.3.7]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/kryptic-sh/hjkl-form/compare/v0.3.4...v0.3.5

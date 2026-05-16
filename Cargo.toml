@@ -3,7 +3,7 @@ name = "hjkl-form"
 description = "Vim-modal forms for hjkl-based apps."
 keywords = ["form", "vim", "tui", "modal", "ui"]
 categories = ["command-line-interface", "gui"]
-version = "0.3.7"
+version = "0.4.0"
 edition = "2024"
 license = "MIT"
 repository = "https://github.com/kryptic-sh/hjkl-form"
@@ -13,9 +13,9 @@ rust-version = "1.95"
 readme = "README.md"
 
 [dependencies]
-hjkl-buffer = "0.6"
-hjkl-engine = { version = "0.8", default-features = false }
-hjkl-vim = "0.19"
+hjkl-buffer = "0.7"
+hjkl-engine = { version = "0.9", default-features = false }
+hjkl-vim = "0.20"
 
 [features]
 crossterm = ["hjkl-engine/crossterm"]
